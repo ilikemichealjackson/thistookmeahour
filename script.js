@@ -1,8 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
     const input = document.getElementById('embedInput');
     const button = document.getElementById('updateEmbed');
-    const iframe = document.getElementById('embedFrame');
+    const iframe = document.querySelector('.embed-container iframe');
     const previewText = document.getElementById('previewText');
+    const openHtmlButton = document.getElementById('openHtmlButton');
 
     function updatePreview() {
         const parameter = input.value || '[THIS IS THE VARIABLE]';
@@ -16,6 +17,10 @@ document.addEventListener('DOMContentLoaded', function() {
         const baseUrl = 'https://vidsrc.me/embed/movie?imdb=';
         iframe.src = baseUrl + parameter;
     }
+
+    openHtmlButton.addEventListener('click', function() {
+        window.location.href = 'index (4).html';
+    });
 
     input.addEventListener('input', updatePreview);
     button.addEventListener('click', updateEmbed);
