@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const iframe = document.querySelector('.embed-container iframe');
     const previewText = document.getElementById('previewText');
     const openHtmlButton = document.getElementById('openHtmlButton');
+    const seriesButton = document.getElementById('seriesButton');
 
     function updatePreview() {
         const parameter = input.value || '[THIS IS THE VARIABLE]';
@@ -18,8 +19,22 @@ document.addEventListener('DOMContentLoaded', function() {
         iframe.src = baseUrl + parameter;
     }
 
+    function getRandomSeriesUrl() {
+        const urls = [
+            'https://example1.com/series',
+            'https://example2.com/series',
+            'https://example3.com/series'
+        ];
+        return urls[Math.floor(Math.random() * urls.length)];
+    }
+
     openHtmlButton.addEventListener('click', function() {
         window.location.href = 'index (4).html';
+    });
+
+    seriesButton.addEventListener('click', function() {
+        const randomUrl = getRandomSeriesUrl();
+        window.location.href = randomUrl;
     });
 
     input.addEventListener('input', updatePreview);
