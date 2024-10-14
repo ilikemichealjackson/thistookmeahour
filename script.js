@@ -21,9 +21,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function getRandomSeriesUrl() {
         const urls = [
-            'https://example1.com/series',
-            'https://example2.com/series',
-            'https://example3.com/series'
+            'https://frevrtv.vercel.app/',
+            'https://frevrtv2.vercel.app/',
+            'https://frevrtv3.vercel.app/'
         ];
         return urls[Math.floor(Math.random() * urls.length)];
     }
