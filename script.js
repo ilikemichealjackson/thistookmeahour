@@ -16,7 +16,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function updateEmbed() {
         const parameter = input.value || '[THIS IS THE VARIABLE]';
-        const baseUrl = 'https://multiembed.mov/directstream.php?video_id=';
+        const end = '&preferred_server=12'
+        const baseUrl = 'https://getsuperembed.link/?video_id=';
         iframe.src = baseUrl + parameter;
     }
 
