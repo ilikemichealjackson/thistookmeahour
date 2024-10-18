@@ -8,8 +8,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function updatePreview() {
         const parameter = input.value || '[THIS IS THE VARIABLE]';
-        const baseUrl = 'https://multiembed.mov/directstream.php?video_id=';
-        const fullUrl = baseUrl + parameter;
+        const end = '&preferred_server=12'
+        const baseUrl = 'https://getsuperembed.link/?video_id=';
+        const fullUrl = baseUrl + parameter + end;
         previewText.textContent = 'Current embed: ' + fullUrl;
     }
 
